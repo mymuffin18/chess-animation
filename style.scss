@@ -1,0 +1,116 @@
+$whiteField: #fccc74;
+$blackField: #8a785d;
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 50px;
+}
+.chessboard {
+	display: flex;
+	flex-direction: column;
+	max-width: 800px;
+	max-height: 800px;
+	min-width: 800px;
+	min-height: 800px;
+}
+
+.row-div {
+	display: flex;
+}
+
+.squares {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-width: 100px;
+	max-width: 100px;
+	min-height: 100px;
+	max-height: 100px;
+	border: 5px solid black;
+}
+
+.white {
+	background-color: $whiteField;
+}
+
+.black {
+	background-color: $blackField;
+}
+
+img {
+	width: 100%;
+}
+
+#white-pawn {
+	animation: whitePawnMove 2s ease forwards;
+	// transform: translate(0, 200px);
+}
+
+@keyframes whitePawnMove {
+	0% {
+		transform: translate(0, 0);
+	}
+	100% {
+		transform: translate(0, 200px);
+	}
+}
+
+#black-pawn {
+	animation: blackPawnMove 2s ease 3s forwards;
+}
+
+@keyframes blackPawnMove {
+	0% {
+		transform: translate(0, 0);
+	}
+	100% {
+		transform: translate(0, -200px);
+	}
+}
+
+#queen {
+	animation: queenMove1 2s ease 4s forwards;
+}
+
+@keyframes queenMove1 {
+	0% {
+		transform: translate(0, 0);
+	}
+	100% {
+		transform: translate(-200px, 200px);
+	}
+}
+
+#knight {
+	animation: knightMove 2s ease 5s forwards;
+}
+
+@keyframes knightMove {
+	0% {
+		transform: translate(0, 0);
+	}
+	100% {
+		transform: translate(-100px, -200px);
+	}
+}
+
+#bishop {
+	animation: bishopMove 2s ease 6s forwards;
+}
+
+@keyframes bishopMove {
+	0% {
+		transform: translate(0, 0);
+	}
+	100% {
+		transform: translate(300px, 300px);
+	}
+}
